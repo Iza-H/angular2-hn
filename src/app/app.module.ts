@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ItemComponent } from './item/item.component';
 
 import { HackernewsApiService } from './hackernews-api.service';
+import { DomainPipe } from './domain.pipe';
 
 @NgModule({
   declarations: [
@@ -17,12 +18,13 @@ import { HackernewsApiService } from './hackernews-api.service';
     HeaderComponent,
     StoriesComponent,
     FooterComponent,
-    ItemComponent
+    ItemComponent,
+    DomainPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
   ],
   providers: [HackernewsApiService],
   bootstrap: [AppComponent]
