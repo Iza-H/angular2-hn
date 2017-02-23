@@ -8,9 +8,11 @@ import { HeaderComponent } from './header/header.component';
 import { StoriesComponent } from './stories/stories.component';
 import { FooterComponent } from './footer/footer.component';
 import { ItemComponent } from './item/item.component';
+import { ItemCommentsComponent } from './item-comments/item-comments.component'
 
 import { HackernewsApiService } from './hackernews-api.service';
 import { DomainPipe } from './domain.pipe';
+import { routing } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -19,12 +21,14 @@ import { DomainPipe } from './domain.pipe';
     StoriesComponent,
     FooterComponent,
     ItemComponent,
+    ItemCommentsComponent,
     DomainPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    routing,
   ],
   providers: [HackernewsApiService],
   bootstrap: [AppComponent]
